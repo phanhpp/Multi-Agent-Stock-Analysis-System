@@ -1,0 +1,52 @@
+{
+  "revenue_growth_ytd": {
+    "value": 262.3,
+    "direction": "improving",
+    "score": 5,
+    "explanation": "Revenue surged ~262% YoY for quarter, reflecting explosive Data Center and AI demand.",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000124/nvda-20240428.htm",
+    "source_type": "10-Q Q1 FY2025 (quarter ended April 28, 2024)",
+    "data_date": "2024-Q2",
+    "derivation": "(Revenue $26,044M vs prior year $7,192M) from Condensed Consolidated Statements of Income. Q1 FY2025 revenue surged ~262% YoY (quarter comparison), reflecting explosive Data Center and AI demand."
+  },
+  "operating_margin": {
+    "value": 64.9,
+    "direction": "improving",
+    "score": 5,
+    "explanation": "Operating margin sky-high (~65%) — dramatic expansion vs prior year’s ~29.8%.",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000124/nvda-20240428.htm",
+    "source_type": "10-Q Q1 FY2025",
+    "data_date": "2024-Q2",
+    "derivation": "Operating Income $16,909M / Revenue $26,044M ≈ 64.9%. (Prior year: $2,140M / $7,192M ≈ 29.8%) :contentReference[oaicite:1]{index=1}"
+  },
+  "net_cash_position": {
+    "value": 22328,
+    "direction": "improving",
+    "score": 5,
+    "explanation": "Strong net cash: cash & securities exceed debt by ~$22.3B.",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000124/nvda-20240428.htm",
+    "source_type": "10-Q Q1 FY2025",
+    "data_date": "2024-Q2",
+    "derivation": "(Cash & eq $7,587M + marketable securities $23,851M) − (short-term debt $1,250M + long-term debt $8,460M) = ~$22, (approx) $22, (587+23,851 − (1,250+8,460) = 21,728M) approx $21,728M. :contentReference[oaicite:2]{index=2}"
+  },
+  "free_cash_flow": {
+      "value": 14976,
+      "direction": "improving",
+      "score": 5,
+      "explanation": "Quarterly free cash flow of ~$15B is extremely strong, indicating excellent cash generation even before CapEx.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000124/nvda-20240428.htm",
+      "source_type": "10-Q Q1 FY2025 (quarter ended April 28, 2024)",
+      "data_date": "2024-Q2",
+      "derivation": "Operating cash provided by operating activities $15,345M – Purchases of PPE $369M = $14,976M."
+  },
+  "capex_intensity": {
+      "value": 1.4,
+      "direction": "stable",
+      "score": 5,
+      "explanation": "CapEx at ~1.4% of revenue is exceptionally low for a high-growth tech leader, indicating capital efficiency.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000124/nvda-20240428.htm",
+      "source_type": "10-Q Q1 FY2025 (quarter ended April 28, 2024)",
+      "data_date": "2024-Q2",
+      "derivation": "CapEx $369M / Revenue $26,044M ≈ 1.4%."
+  }
+}

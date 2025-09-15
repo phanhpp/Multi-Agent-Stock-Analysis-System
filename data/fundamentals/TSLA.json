@@ -1,0 +1,53 @@
+{
+  "revenue_growth_ytd": {
+    "value": -3.0,
+    "direction": "declining",
+    
+    "score": 2,
+    "explanation": "Six-month revenue declined ~3% YoY as price reductions weighed on Automotive.",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828024032662/tsla-20240630.htm",
+    "source_type": "10-Q filing Q2 2024 - quarterly period ended June 30, 2024",
+    "data_date": "2024-Q2",
+    "derivation": "6M total revenues $46,801 vs $48,256 prior-year from Consolidated Statements of Operations."
+  },
+  "operating_margin": {
+    "value": 5.9,
+    "direction": "declining",
+    "score": 2,
+    "explanation": "Margin compressed on pricing and higher operating expenses amid growth investments.",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828024032662/tsla-20240630.htm",
+    "source_type": "10-Q filing Q2 2024 - quarterly period ended June 30, 2024",
+    "data_date": "2024-Q2",
+    "derivation": "Operating income $2,776 / Total revenues $46,801 = 5.9% (six months)."
+  },
+  "net_cash_position": {
+    "value": 23333,
+    "direction": "stable",
+    "score": 4,
+    "explanation": "Strong net cash: $30.7B cash & ST investments vs ~$7.4B total debt.",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828024032662/tsla-20240630.htm",
+    "source_type": "10-Q filing Q2 2024 - quarterly period ended June 30, 2024",
+    "data_date": "2024-Q2",
+    "derivation": "Cash & ST investments $30,720 (table of cash/short-term investments) − Total debt $7,387 (Note 7)."
+  },
+  "free_cash_flow": {
+    "value": -1189,
+    "direction": "declining",
+    "score": 1,
+    "explanation": "Negative FCF as heavy capex outpaced operating cash generation in H1.",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828024032662/tsla-20240630.htm",
+    "source_type": "10-Q filing Q2 2024 - quarterly period ended June 30, 2024",
+    "data_date": "2024-Q2",
+    "derivation": "Operating CF $3,854 − Purchases of property & equipment $5,043 = −$1,189 (six months)."
+  },
+  "capex_intensity": {
+    "value": 10.8,
+    "direction": "increasing",
+    "score": 2,
+    "explanation": "Capex running ~11% of revenue to support factories and AI infrastructure.",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828024032662/tsla-20240630.htm",
+    "source_type": "10-Q filing Q2 2024 - quarterly period ended June 30, 2024",
+    "data_date": "2024-Q2",
+    "derivation": "Capex $5,043 / Total revenues $46,801 = 10.8% (six months)."
+  }
+}

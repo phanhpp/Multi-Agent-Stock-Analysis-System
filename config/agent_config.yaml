@@ -1,0 +1,35 @@
+# Agent decision thresholds for Alpha Agents system
+# All thresholds are configurable for sensitivity analysis
+
+valuation_agent:
+  # Annualized return thresholds (percentage)
+  buy_return_threshold: 15.0    # Minimum return for BUY recommendation
+  sell_return_threshold: -5.0   # Maximum return for SELL recommendation
+  
+  # Annualized volatility thresholds (percentage)
+  buy_volatility_threshold: 30.0   # Maximum volatility for BUY recommendation
+  sell_volatility_threshold: 50.0  # Minimum volatility for SELL recommendation
+  
+  # Lookback period for calculations
+  lookback_days: 90
+
+sentiment_agent:
+  # VADER sentiment score thresholds (-1 to 1)
+  buy_sentiment_threshold: 0.4    # Requires sentiment above the 75th percentile to trigger BUY, only the most positive news will trigger BUY
+  sell_sentiment_threshold: -0.03  # Requires sentiment below 25th percentile. Only news that's genuinely negative (not just neutral) triggers SELL
+
+fundamental_agent:
+  # Overall fundamental score thresholds (1-5 scale)
+  buy_score_threshold: 4.0      # Minimum score for BUY, 4.0 = Strong fundamentals
+  sell_score_threshold: 2.0     # Maximum score for SELL, 2.0 = Weak fundamentals  
+
+coordinator:
+  # Weighted voting system
+  weights:
+    valuation: 0.4
+    sentiment: 0.3
+    fundamental: 0.3
+  
+  # Consensus thresholds
+  buy_weight_threshold: 0.4     # Minimum weighted score for BUY
+  sell_weight_threshold: 0.2    # Maximum weighted score for SELL

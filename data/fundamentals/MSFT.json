@@ -1,0 +1,52 @@
+{
+  "revenue_growth_ytd": {
+      "value": 15.8,
+      "direction": "improving",
+      "score": 4,
+      "explanation": "Revenue grew ~15.8% YTD (nine months) compared to prior year, driven by robust cloud and Productivity segments.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017024048288/msft-20240331.htm",
+      "source_type": "10-Q filing Q3 FY2024 (nine months ended March 31, 2024)",
+      "data_date": "2024-Q2",
+      "derivation": "Nine-month revenue $180,395M vs $155,726M prior-year nine months from Income Statements."
+  },
+  "operating_margin": {
+      "value": 45.2,
+      "direction": "improving",
+      "score": 5,
+      "explanation": "Operating margin around 45.2%, up from ~41.2% last year, showcasing strong scaling and operating leverage.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017024048288/msft-20240331.htm",
+      "source_type": "10-Q filing Q3 FY2024",
+      "data_date": "2024-Q2",
+      "derivation": "Operating Income $81,508M / Total Revenue $180,395M = 45.2%. Prior-year margin ~64,269 / 155,726 ≈ 41.3%."
+  },
+  "net_cash_position": {
+      "value": 16828,
+      "direction": "stable",
+      "score": 4,
+      "explanation": "Solid net cash: huge liquidity minus debt implies a strong balance sheet buffer.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017024048288/msft-20240331.htm",
+      "source_type": "10-Q filing Q3 FY2024",
+      "data_date": "2024-Q2",
+      "derivation": "(Cash & equivalents + short-term investments) $80,021M − (short-term debt $20,535M + long-term debt $42,658M) ≈ $16,828M."
+  },
+  "free_cash_flow": {
+      "value": 50749,
+      "direction": "improving",
+      "score": 5,
+      "explanation": "Very strong free cash flow; operating cash vastly exceeds capex.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017024048288/msft-20240331.htm",
+      "source_type": "10-Q filing Q3 FY2024",
+      "data_date": "2024-Q2",
+      "derivation": "Operating cash flow $81,353M − Capex (PPE additions) $30,604M = $50,749M."
+  },
+  "capex_intensity": {
+      "value": 17.0,
+      "direction": "stable",
+      "score": 4,
+      "explanation": "Capex about 17.0% of revenue – meaningful but consistent with growth and cloud infrastructure needs.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017024048288/msft-20240331.htm",
+      "source_type": "10-Q filing Q3 FY2024",
+      "data_date": "2024-Q2",
+      "derivation": "Capex $30,604M / Revenue $180,395M ≈ 17.0%."
+  }
+}

@@ -1,0 +1,154 @@
+# News Search Prompt for Alpha Agents Assessment
+
+## SEARCH REQUIREMENTS SUMMARY
+Based on assessment requirements:
+- **Tickers**: AAPL, MSFT, NVDA, TSLA (exactly these 4)
+- **Articles per ticker**: 5-15 items each (targeting 6-8 for balance)
+- **Date range**: May 1, 2024 to August 31, 2024 (4 months coverage)
+- **Sources**: Reputable financial/tech news sources only
+- **Content**: Headline + 1-2 sentence snippet + source URL
+- **Distribution**: Even spread across months for market variety
+
+## INDIVIDUAL TICKER SEARCH PROMPTS
+
+### APPLE (AAPL) - Search Query:
+```
+"Apple AAPL news May June July August 2024 earnings quarterly results iPhone services revenue AI iOS WWDC stock performance"
+```
+
+**What to look for:**
+- Q2 2024 earnings (May) - revenue, iPhone sales, services growth
+- WWDC 2024 announcements (June) - iOS 18, AI features, developer news  
+- Q3 2024 earnings (August) - quarterly performance, guidance
+- Product announcements, supply chain news, China market updates
+- Stock price movements, analyst upgrades/downgrades
+- AI/Apple Intelligence developments
+
+**Required format per article:**
+```json
+{
+  "title": "Exact headline from source",
+  "snippet": "1-2 sentences summarizing key points and impact",
+  "date": "2024-MM-DD",
+  "source": "Reuters/CNBC/Bloomberg/WSJ/etc",
+  "url": "https://actual-source-url.com"
+}
+```
+
+### MICROSOFT (MSFT) - Search Query:
+```
+"Microsoft MSFT news May June July August 2024 earnings Azure cloud revenue Copilot AI Build conference stock"
+```
+
+**What to look for:**
+- Q3/Q4 2024 earnings - cloud growth, Azure revenue, productivity suite
+- Build 2024 conference (May) - Copilot announcements, AI developments
+- Azure/cloud business updates, enterprise partnerships
+- Microsoft 365 Copilot adoption, productivity metrics
+- OpenAI partnership developments, regulatory scrutiny
+- Stock analyst ratings, price target changes
+
+### NVIDIA (NVDA) - Search Query:  
+```
+"NVIDIA NVDA news May June July August 2024 earnings data center AI chips revenue Blackwell GPU stock"
+```
+
+**What to look for:**
+- Q1/Q2 2024 earnings - record data center revenue, AI chip demand
+- Computex 2024 (June) - Blackwell architecture announcements
+- Stock split execution, market cap milestones  
+- Supply chain updates, manufacturing partnerships
+- Gaming vs data center revenue shifts
+- Competitive positioning vs AMD, Intel
+
+### TESLA (TSLA) - Search Query:
+```
+"Tesla TSLA news May June July August 2024 deliveries earnings EV sales China robotaxi Musk compensation stock"
+```
+
+**What to look for:**
+- Q1/Q2 2024 delivery numbers - vehicle production, market share
+- Earnings results - automotive revenue, energy storage business
+- Shareholder meetings - Musk compensation package votes
+- Price cuts, competitive pressure in EV market
+- China market performance, local competition
+- Robotaxi/FSD developments, regulatory updates
+
+## SEARCH EXECUTION STRATEGY
+
+### Phase 1: Broad Search
+For each ticker, search:
+1. **"[Company] [TICKER] earnings 2024"** - Get quarterly results
+2. **"[Company] [TICKER] news May June July August 2024"** - General coverage
+3. **"[Company] [TICKER] stock price [month] 2024"** - Price movements
+
+### Phase 2: Specific Events
+Target known 2024 events:
+- **May**: Q1 earnings season, Microsoft Build, Tesla shareholder meeting
+- **June**: Apple WWDC, NVIDIA Computex, various product launches  
+- **July**: Q2 earnings season across all companies
+- **August**: Late summer updates, guidance revisions
+
+### Phase 3: Source Verification
+Prioritize these reputable sources:
+- **Primary**: Reuters, Bloomberg, Wall Street Journal, CNBC
+- **Tech focus**: TechCrunch, The Verge, Ars Technica
+- **Company sources**: Official press releases, investor relations
+- **Analysis**: MarketWatch, Seeking Alpha, Financial Times
+
+## QUALITY CONTROL CHECKLIST
+
+### Per Article Requirements:
+- [ ] **Date**: Within May 1 - August 31, 2024 range
+- [ ] **Headline**: Exact title from reputable source
+- [ ] **Snippet**: 1-2 sentences, factual, concise
+- [ ] **Source**: Named publication (not aggregator)  
+- [ ] **URL**: Direct link to original article
+- [ ] **Relevance**: Directly impacts stock sentiment/fundamentals
+- [ ] **Sentiment variety**: Mix of positive, neutral, negative news
+
+### Overall Coverage Requirements:
+- [ ] **6-8 articles per ticker** (24-32 total)
+- [ ] **Even monthly distribution**: 1-2 articles per month per ticker
+- [ ] **Event coverage**: Major earnings, conferences, announcements
+- [ ] **Market variety**: Bull/bear sentiment, different news types
+- [ ] **Source diversity**: Multiple publications, not dominated by one source
+
+## CONTENT VALIDATION CRITERIA
+
+### Snippet Quality Standards:
+✅ **Good snippet**: "Apple reported Q2 revenue of $85.8 billion, beating analyst estimates, with iPhone sales growing 6% year-over-year. Services revenue reached $24.2 billion, up 14% from the previous year."
+
+❌ **Bad snippet**: "Apple had a good quarter with strong results."
+
+### URL Requirements:
+✅ **Valid URLs**: Direct links to original articles
+❌ **Invalid URLs**: Search result pages, paywalled content, broken links
+
+### Date Distribution Target:
+- **May 2024**: 6-8 articles total across all tickers
+- **June 2024**: 6-8 articles total (conferences, product launches)
+- **July 2024**: 6-8 articles total (Q2 earnings season)
+- **August 2024**: 6-8 articles total (late summer developments)
+
+## FINAL VERIFICATION STEPS
+
+Before finalizing news data:
+1. **Check date range**: All articles between 2024-05-01 and 2024-08-31
+2. **Verify URLs**: Each link points to actual article
+3. **Balance sentiment**: Mix of positive/negative/neutral across tickers
+4. **Source credibility**: All from reputable financial/tech publications
+5. **Content relevance**: Each article could impact stock trading decisions
+6. **No data leakage**: Latest article date ≤ 2024-08-31 (latest possible as-of date)
+
+## SEARCH OUTPUT FORMAT
+
+Save results as JSON files per ticker:
+```
+data/news/AAPL.json
+data/news/MSFT.json  
+data/news/NVDA.json
+data/news/TSLA.json
+```
+
+Each file contains array of articles meeting all requirements above.

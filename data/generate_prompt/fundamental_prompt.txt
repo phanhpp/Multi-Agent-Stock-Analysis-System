@@ -1,0 +1,216 @@
+# Fundamental Factsheet Creation Prompt for Alpha Agents Assessment
+
+## ASSESSMENT REQUIREMENTS SUMMARY
+Based on requirements:
+- **Create compact factsheet per ticker** (JSON/CSV) with 3–6 basic signals
+- **Examples**: revenue growth sign, operating-margin level/direction, leverage proxy, capex intensity  
+- **Document how you derived each fact** (source, manual assumption, or simple approximation)
+- **Clarity > breadth** - simple, interpretable metrics
+- **Tickers**: AAPL, MSFT, NVDA, TSLA exactly
+
+## SEARCH STRATEGY FOR EACH TICKER
+
+### Data Sources Priority (in order):
+1. **Company 10-K/10-Q filings** (SEC EDGAR database)
+2. **Official earnings calls transcripts** (company investor relations)
+3. **Company annual/quarterly reports** (investor.company.com)
+4. **Verified financial data sites** (Yahoo Finance, Google Finance, MarketWatch)
+5. **Professional analysis** (Seeking Alpha, Morningstar - with specific citations)
+
+### Search Queries Per Company:
+
+#### APPLE (AAPL):
+```
+"Apple AAPL 10-K 2024 annual report SEC filing revenue growth operating margin"
+"Apple AAPL Q2 Q3 2024 earnings call transcript financial metrics"
+"Apple investor relations financial data revenue margin debt ratios 2024"
+"Apple AAPL fundamental analysis return on equity cash flow 2024"
+```
+
+#### MICROSOFT (MSFT):
+```
+"Microsoft MSFT 10-K 2024 SEC filing financial statements revenue growth"
+"Microsoft MSFT quarterly earnings 2024 operating margin productivity cloud"
+"Microsoft investor relations financial metrics azure revenue margins"
+"Microsoft MSFT fundamental analysis balance sheet debt equity ratios"
+```
+
+#### NVIDIA (NVDA):
+```
+"NVIDIA NVDA 10-K 2024 annual report SEC filing data center revenue"
+"NVIDIA NVDA earnings call transcript Q1 Q2 2024 financial metrics"
+"NVIDIA investor relations revenue growth margins R&D spending"
+"NVIDIA NVDA fundamental analysis gross margins operating efficiency"
+```
+
+#### TESLA (TSLA):
+```  
+"Tesla TSLA 10-K 2024 SEC filing annual report automotive revenue"
+"Tesla TSLA quarterly earnings 2024 vehicle deliveries margins"
+"Tesla investor relations financial data energy storage revenue"
+"Tesla TSLA fundamental analysis cash flow debt ratios efficiency"
+```
+
+## REQUIRED FUNDAMENTAL SIGNALS (3-6 per ticker)
+
+### Signal 1: Revenue Growth Trend
+**What to find:**
+- TTM (trailing twelve months) revenue growth %
+- YoY quarterly revenue growth trend
+- Revenue growth direction (accelerating/decelerating)
+
+**Search for:**
+- "revenue growth year-over-year percentage"
+- "quarterly revenue trends 2024"
+- "total revenue TTM comparison"
+
+### Signal 2: Operating Margin Level & Direction  
+**What to find:**
+- Current operating margin %
+- Operating margin trend (improving/declining/stable)
+- Margin comparison to previous periods
+
+**Search for:**
+- "operating income margin percentage"
+- "operating margin trends quarterly"
+- "cost structure efficiency metrics"
+
+### Signal 3: Leverage/Debt Profile
+**What to find:**
+- Debt-to-equity ratio or net debt/equity
+- Debt levels relative to cash position
+- Balance sheet strength indicators
+
+**Search for:**
+- "debt to equity ratio balance sheet"
+- "net debt cash position leverage"
+- "financial leverage debt ratios"
+
+### Signal 4: Profitability & Returns
+**What to find:**
+- Return on equity (ROE) %
+- Return on assets (ROA) or ROIC
+- Profit margin trends
+
+**Search for:**
+- "return on equity ROE percentage"
+- "return on invested capital ROIC"
+- "net profit margin profitability"
+
+### Signal 5: Cash Flow Strength
+**What to find:**
+- Free cash flow TTM
+- Operating cash flow margin
+- Cash conversion efficiency
+
+**Search for:**
+- "free cash flow generation TTM"
+- "operating cash flow margins"
+- "cash flow conversion metrics"
+
+### Signal 6: Market Position/Competitive Moat
+**What to find:**
+- Market share position
+- Competitive advantages
+- Pricing power indicators
+
+**Search for:**
+- "market share competitive position"
+- "competitive advantages moat"
+- "pricing power market leadership"
+
+## DATA EXTRACTION FORMAT
+
+### For Each Metric, Document:
+
+```json
+{
+  "signal_name": {
+    "value": 15.7,                    // Actual number
+    "direction": "improving",          // improving/declining/stable
+    "score": 4,                       // 1-5 scale (1=poor, 5=excellent)
+    "explanation": "Clear 1-2 sentence rationale",
+    "source_url": "https://direct-source-url.com",
+    "source_type": "10-K filing",     // 10-K/earnings call/company report
+    "data_date": "2024-Q2",          // When this data is from
+    "derivation": "manual extraction from SEC filing"
+  }
+}
+```
+
+### Scoring Scale (1-5):
+- **5 = Excellent**: Top quartile performance, strong competitive position
+- **4 = Good**: Above-average, solid fundamentals  
+- **3 = Average**: Neutral, neither strength nor weakness
+- **2 = Below Average**: Some concerns, declining trends
+- **1 = Poor**: Significant weaknesses, major concerns
+
+## SOURCE URL REQUIREMENTS
+
+### Primary Sources (Preferred):
+- **SEC EDGAR**: https://www.sec.gov/edgar/searchedgar/companysearch.html
+- **Company IR**: https://investor.apple.com, https://www.microsoft.com/en-us/investor
+- **Official Earnings**: Direct links to earnings call transcripts, press releases
+
+### Secondary Sources (Acceptable with verification):
+- **Yahoo Finance**: https://finance.yahoo.com/quote/AAPL/financials
+- **MarketWatch**: https://www.marketwatch.com/investing/stock/aapl/financials  
+- **Google Finance**: https://www.google.com/finance (with specific metric pages)
+
+### URL Validation:
+✅ **Good URLs**: Direct links to specific financial documents/pages
+❌ **Bad URLs**: Generic company homepages, search result pages
+
+## QUALITY CONTROL CHECKLIST
+
+### Per Metric Requirements:
+- [ ] **Actual numerical value** (not qualitative description)
+- [ ] **Clear directional trend** (improving/declining/stable)
+- [ ] **1-5 scoring with rationale** (why this score?)
+- [ ] **Direct source URL** (not aggregator or search page)
+- [ ] **Source credibility** (official filing, earnings call, company report)
+- [ ] **Recent data** (2024 or latest available)
+- [ ] **Derivation method** (how you obtained/calculated this)
+
+### Overall Factsheet Requirements:
+- [ ] **3-6 signals per ticker** (not more, not less)
+- [ ] **Mix of signal types** (growth, margins, leverage, returns, etc.)
+- [ ] **Consistent scoring methodology** across all tickers
+- [ ] **Source diversity** (not all from single source)
+- [ ] **Clear documentation** of assumptions and limitations
+
+## EXAMPLE SEARCH EXECUTION
+
+### Step 1: Find Official 10-K Filing
+Search: `"Apple 10-K 2024" site:sec.gov`
+Result: Direct SEC EDGAR link to Apple's 2024 10-K filing
+
+### Step 2: Extract Revenue Growth  
+From 10-K: "Revenue for fiscal 2024 was $391.04 billion compared to $383.29 billion for fiscal 2023"
+Calculation: (391.04 - 383.29) / 383.29 = 2.02% growth
+
+### Step 3: Document with Source
+```json
+"revenue_growth_ttm": {
+  "value": 2.02,
+  "direction": "positive", 
+  "score": 3,
+  "explanation": "Modest revenue growth of 2.02% shows stable but slowing expansion",
+  "source_url": "https://www.sec.gov/ix?doc=/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+  "source_type": "10-K filing",
+  "data_date": "2024-FY",
+  "derivation": "calculated from fiscal 2024 vs 2023 total revenue in 10-K"
+}
+```
+
+## OUTPUT FORMAT
+
+Create 4 JSON files:
+```
+data/fundamentals/AAPL.json
+data/fundamentals/MSFT.json  
+data/fundamentals/NVDA.json
+data/fundamentals/TSLA.json
+```
+
+Each containing factsheet meeting all requirements above, with full source documentation and URL verification.

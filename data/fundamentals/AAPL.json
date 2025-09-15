@@ -1,0 +1,52 @@
+{
+  "revenue_growth_ytd": {
+    "value": -0.8,
+    "direction": "declining",
+    "score": 2,
+    "explanation": "Six-month net sales slipped 0.8% YoY, reflecting flat hardware against stronger Services.",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000069/aapl-20240330.htm",
+    "source_type": "10-Q filing Q2 2024",
+    "data_date": "2024-Q2",
+    "derivation": "6M net sales $210,328 vs $211,990 prior-year from Condensed Consolidated Statements of Operations. (Six months figures shown directly in the 10-Q.)"
+  },
+  "operating_margin": {
+    "value": 32.5,
+    "direction": "improving",
+    "score": 5,
+    "explanation": "Operating margin expanded despite flat revenue, underlining cost discipline and high Services mix.",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000069/aapl-20240330.htm",
+    "source_type": "10-Q filing Q2 2024",
+    "data_date": "2024-Q2",
+    "derivation": "Operating income $68,273 / Net sales $210,328 from Item 1 notes (total operating income) and Statements of Operations."
+  },
+  "net_cash_position": {
+    "value": 57747,
+    "direction": "stable",
+    "score": 4,
+    "explanation": "Large liquidity buffer: cash & marketable securities exceed debt by ~$57.7B.",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000069/aapl-20240330.htm",
+    "source_type": "10-Q filing Q2 2024",
+    "data_date": "2024-Q2",
+    "derivation": "(Cash & cash equivalents $32,695 + current marketable securities $34,455 + non-current marketable securities $95,187) − (term debt current $10,762 + term debt non-current $91,831 + commercial paper $1,997)."
+  },
+  "free_cash_flow": {
+    "value": 58197,
+    "direction": "improving",
+    "score": 5,
+    "explanation": "Robust FCF reflects strong operating cash generation with modest capex.",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000069/aapl-20240330.htm",
+    "source_type": "10-Q filing Q2 2024",
+    "data_date": "2024-Q2",
+    "derivation": "Operating CF $62,585 − Payments for acquisition of PPE $4,388 = $58,197 (six months)."
+  },
+  "capex_intensity": {
+    "value": 2.1,
+    "direction": "stable",
+    "score": 4,
+    "explanation": "Low capital intensity for a hardware-services mix implies high capital efficiency.",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000069/aapl-20240330.htm",
+    "source_type": "10-Q filing Q2 2024",
+    "data_date": "2024-Q2",
+    "derivation": "Capex $4,388 / Net sales $210,328 = 2.1% (six months)."
+  }
+}
