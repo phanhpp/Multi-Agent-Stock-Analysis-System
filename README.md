@@ -169,6 +169,11 @@ The system implements an **API-first strategy** with cached data as reliable fal
 - **Trading Days Adjustment**: Converts trading days to calendar days using 7/5 ratio (accounts for weekends)
 - **Example**: 63 trading days = 88 calendar days
 
+### Data Constraints
+- **With API Access**: No forward period limits (uses live financialdatasets.ai data)
+- **Cached Fallback** (when API unavailable): Aug 31 → Nov 29 (~63 trading days max)
+  - **63 days**: Full coverage ✅ | **75+ days**: Partial coverage for late August dates. Gracefully degrades with warnings rather than hard failures.
+
 ### Metric Definitions
 
 **Return Metrics**:
