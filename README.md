@@ -225,11 +225,17 @@ The system implements an **API-first strategy** with cached data as reliable fal
 
 ## Tests
 
-**Lightweight test suite** covering core functionality:
-- **Data Loading**: Validates API integration, fallback mechanisms, and temporal filtering
-- **Backtest Math**: Verifies return calculations, risk metrics, and portfolio construction logic  
-- **Pipeline Validation**: End-to-end workflow execution and output generation
+**Comprehensive test suite** (31 tests) covering core functionality:
+- **Unit Tests** (26 tests):
+  - **Data Loading**: API integration, fallback mechanisms, temporal filtering
+  - **Backtest Math**: Return calculations, risk metrics, portfolio construction logic  
+  - **Pipeline Validation**: Date validation, input sanitization, error handling
+- **Integration Tests** (5 tests):
+  - **End-to-End Pipeline**: Full workflow execution with real components
+  - **Output Validation**: Verifies `picks.csv`, `performance.csv`, and summary files
+  - **Content Sanity**: Validates rating consistency and reasonable return values
+  - **Deterministic Behavior**: Ensures consistent results across runs
 
-Run tests: `python -m pytest tests/`
+Run tests: `python -m pytest tests/` (requires activated `.venv`)
 
 
