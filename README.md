@@ -6,7 +6,12 @@ A multi-agent framework for systematic stock analysis and portfolio construction
 
 ### Environment & Dependencies
 
-1. **Python Requirements**: Python 3.8+ with pip
+1. **Python Requirements**: 
+
+  * Ensure you're using Python 3.11 or later.
+
+  * This version is required for optimal compatibility with LangGraph.
+
 2. **Create Virtual Environment & Install Dependencies**:
    ```bash
    # Create virtual environment
